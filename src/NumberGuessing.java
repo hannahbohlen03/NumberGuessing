@@ -12,8 +12,12 @@ public class NumberGuessing {
         int randomNumber = (int)(Math.random()*100);
         int userNumber;
 
+
         //Ask
-        System.out.println();
+        System.out.println("Hello, there! Let's play a guessing game . . . ");
+        System.out.println("Guess a whole number between 0 and 100.");
+        userNumber = keyboard.nextInt();
+
     }
 }
 
