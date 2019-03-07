@@ -26,5 +26,6 @@ public class NumberGuessing {
             userNumber = keyboard.nextInt();
 
         }
+        System.out.println("Congradulations, you chose the correct number!");
     }
 }
