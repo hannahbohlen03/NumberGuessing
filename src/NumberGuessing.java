@@ -3,13 +3,12 @@ import java.util.Scanner;
 public class NumberGuessing {
 
 
-
-    public static void main (String[]args){
+    public static void main(String[] args) {
 
         //Declare
         Scanner keyboard;
         keyboard = new Scanner(System.in);
-        int randomNumber = (int)(Math.random()*100);
+        int randomNumber = (int) (Math.random() * 100);
         int userNumber;
 
 
@@ -18,6 +17,14 @@ public class NumberGuessing {
         System.out.println("Guess a whole number between 0 and 100.");
         userNumber = keyboard.nextInt();
 
+        while (userNumber < randomNumber) {
+            System.out.println("Too low! Try again.");
+            userNumber = keyboard.nextInt();
+        }
+        while (userNumber > randomNumber) {
+            System.out.println("Too high! Try again!");
+            userNumber = keyboard.nextInt();
+
+        }
     }
 }
-
