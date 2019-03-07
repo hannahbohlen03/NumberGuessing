@@ -27,5 +27,12 @@ public class NumberGuessing {
 
         }
         System.out.println("Congradulations, you chose the correct number!");
+        System.out.println(" ");
+        System.out.println(" ");
+        System.out.println(" ");
+        System.out.println(" ");
+        System.out.println(" ");
+        System.out.println("Just so you know this ran correctly, your number was " +userNumber + " and the randomly generated " +
+                "number was " + randomNumber + ".");
     }
 }
