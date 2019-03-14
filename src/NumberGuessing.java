@@ -38,7 +38,7 @@ public class NumberGuessing {
                 System.out.println("Sorry, you ran out of tries!");
             }
             else{
-                System.out.println("Good job, you picked the correct number!");
+                System.out.println("Good job, you picked the correct number and you had " + attempts + " trie left too!");
                 System.out.println("    ");
                 System.out.println("Just so you know this ran correctly, your number was " +userNumber+ " and the random ");
                 System.out.println("number was " +randomNumber+ ".");
