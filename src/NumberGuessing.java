@@ -9,8 +9,9 @@ public class NumberGuessing {
         Scanner keyboard;
         keyboard = new Scanner(System.in);
         int randomNumber = (int) (Math.random() * 100);
+        System.out.println(randomNumber);
         int userNumber;
-        int attempts = 10;
+        int attempts = 9;
 
 
         //Ask User
@@ -22,27 +23,31 @@ public class NumberGuessing {
         //Actual Loops Portions
         while(userNumber!=randomNumber && attempts>0){
             if(userNumber>randomNumber){
-                System.out.println("Too high! Try again.");
-                userNumber=keyboard.nextInt();
-                attempts = attempts-1;
+                System.out.println("Too high! You have" + attempts + " tries left.");
+
 
             }
             else if (userNumber<randomNumber) {
-                System.out.println("Too low! Try again");
-                userNumber = keyboard.nextInt();
-                attempts = attempts - 1;
-            }
-            }
+                System.out.println("Too low! You have " + attempts + " tries left.");
 
-            if (attempts == 0){
-                System.out.println("Sorry, you ran out of tries!");
             }
-            else{
-                System.out.println("Good job, you picked the correct number and you had " + attempts + " trie left too!");
-                System.out.println("    ");
-                System.out.println("Just so you know this ran correctly, your number was " +userNumber+ " and the random ");
-                System.out.println("number was " +randomNumber+ ".");
+            userNumber = keyboard.nextInt();
+            attempts--;
+        }
+
+
+        if (attempts == 0){
+            System.out.println("Sorry, you ran out of tries!");
+            if(userNumber==randomNumber){
+                System.out.println("However, you got it just in the nick of time.");
             }
+        }
+        else{
+            System.out.println("Good job, you picked the correct number and you had " + attempts + " tries left too!");
+            System.out.println("    ");
+            System.out.println("Just so you know this ran correctly, your number was " + userNumber + " and the random ");
+            System.out.println("number was " + randomNumber + ".");
+        }
 
     }
 }
